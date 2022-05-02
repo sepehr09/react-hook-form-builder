@@ -1,7 +1,7 @@
 {
   "name": "react-hook-form-builder",
-  "version": "0.1.1",
-  "description": "schema form builder for react-hook-form",
+  "version": "0.1.2",
+  "description": "light weight schema Form builder for react-hook-form",
   "private": false,
   "keywords": [
     "form-builder",
