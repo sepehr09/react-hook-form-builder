@@ -1,7 +1,7 @@
-import React, { createContext } from "react";
+import React from "react";
 import { IFormBuilderProvider } from "../../types";
 
-export const FormBuilderContext = createContext({});
+export const FormBuilderContext = React.createContext({});
 
 const FormBuilderProvider: IFormBuilderProvider = ({ children, elements }) => <FormBuilderContext.Provider value={{ elements }}>{children}</FormBuilderContext.Provider>;
 

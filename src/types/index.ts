@@ -1,7 +1,6 @@
-import { ReactElement } from "react";
 import { FieldPathValue, RegisterOptions, SubmitHandler, UnpackNestedValue, UseFormReturn } from "react-hook-form";
 
-export type IFormBuilderProvider = (args: { children: ReactElement; elements: any[] }) => ReactElement;
+export type IFormBuilderProvider = (args: { children: React.ReactElement; elements: any[] }) => React.ReactElement;
 
 export type IFormBuilder<TFormValues> = {
   onSubmit?: SubmitHandler<TFormValues>;

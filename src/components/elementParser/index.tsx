@@ -1,11 +1,11 @@
-import React, { useContext } from "react";
+import React from "react";
 import { Controller, FieldValues, useFormContext } from "react-hook-form";
 import { IElementParser } from "../../types";
 import { isFunction } from "../../utils/helpers";
 import { FormBuilderContext } from "../formBuilderProvider";
 
 const ElementParser = <TFieldValues extends FieldValues = FieldValues>({ schema }: IElementParser<TFieldValues>) => {
-  const formBuilderContext: any = useContext(FormBuilderContext);
+  const formBuilderContext: any = React.useContext(FormBuilderContext);
   const formProps = useFormContext(); // retrieve all hook methods
 
   const Element = formBuilderContext?.elements?.find((a: any) => a.key === schema?.elementType)?.element;
