@@ -1,6 +1,8 @@
 # React hook form builder
 
-Light weight schema Form builder for [react-hook-form](react-hook-form).
+> Light weight schema Form builder for [react-hook-form][react-hook-form].
+
+[![NPM](https://img.shields.io/npm/v/react-hook-form-builder.svg)](https://www.npmjs.com/package/react-hook-form-builder)
 
 This package takes your schema and builds the form based on that using your own components.
 
@@ -104,12 +106,9 @@ export default function ContactUsPage() {
 | key              | string                                               | unque key for each form element.                 |
 | elementType      | string                                               | Define element type                              |
 | props            | any                                                  | Props passing to element component.              |
-| rules            | [HTML standard for form validation](html-validation) |                                                  |
+| rules            | [HTML standard for form validation][html-validation] |                                                  |
 | defaultValue     | any                                                  |                                                  |
 | ignoreController | boolean                                              | ignore wrapping element inside `<Controller />`. |
-
-[html-validation]: https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation
-[react-hook-form]: https://react-hook-form.com/
 
 ## Example element
 
@@ -124,3 +123,6 @@ const BasicInput: IBasicInput = (props) => {
 
 export default BasicInput;
 ```
+
+[html-validation]: https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation
+[react-hook-form]: https://react-hook-form.com/
