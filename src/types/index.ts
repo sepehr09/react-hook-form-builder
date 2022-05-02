@@ -1,23 +1,25 @@
 import { ReactElement } from "react";
-import { FieldPath, FieldPathValue, RegisterOptions, SubmitHandler, UnpackNestedValue, UseFormReturn } from "react-hook-form";
+import { FieldPathValue, RegisterOptions, SubmitHandler, UnpackNestedValue, UseFormReturn } from "react-hook-form";
 
 export type IFormBuilderProvider = (args: { children: ReactElement; elements: any[] }) => ReactElement;
 
-export type IFormBuilder<TFormValues, TName extends FieldPath<TFormValues> = FieldPath<TFormValues>> = {
+export type IFormBuilder<TFormValues> = {
   onSubmit?: SubmitHandler<TFormValues>;
   children?: React.ReactNode;
-  schema: ISchemaProps<TFormValues, TName>[];
+  schema: ISchemaProps<TFormValues>[];
   methods: UseFormReturn<TFormValues>;
 };
 
-export interface IElementParser<TFormValues, TName extends FieldPath<TFormValues> = FieldPath<TFormValues>> {
-  element: ISchemaProps<TFormValues, TName>;
+export interface IElementParser<TFormValues> {
+  schema: ISchemaProps<TFormValues>;
 }
 
-export interface ISchemaProps<TFormValues = Record<string, any>, TName extends FieldPath<TFormValues> = FieldPath<TFormValues>> {
-  key: TName;
+export interface ISchemaProps<TFormValues extends Record<string, any> = Record<string, any>> {
+  key: string;
+  // key: FieldName<TFormValues>;
   elementType: string;
   props: any;
-  rules?: Omit<RegisterOptions<TFormValues, TName>, "valueAsNumber" | "valueAsDate" | "setValueAs" | "disabled">;
-  defaultValue?: UnpackNestedValue<FieldPathValue<TFormValues, TName>>;
+  rules?: Exclude<RegisterOptions, "valueAsNumber" | "valueAsDate" | "setValueAs">;
+  defaultValue?: UnpackNestedValue<FieldPathValue<TFormValues, any>>;
+  ignoreController?: boolean;
 }

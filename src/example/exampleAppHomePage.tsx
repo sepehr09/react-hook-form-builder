@@ -6,6 +6,7 @@ const schema = [
   {
     key: "firstName",
     elementType: "BasicInput",
+    defaultValue: "john",
     props: {
       placeholder: "First Name",
     },
@@ -20,15 +21,20 @@ const schema = [
   {
     key: "submit",
     elementType: "Button",
-    props: {
+    ignoreController: true,
+    props: ({ formState: { isDirty } }: any) => ({
       type: "submit",
-      label: "save",
-    },
+      label: isDirty ? "Save" : "Submit",
+    }),
   },
 ];
 
 const ExampleAppHomePage = () => {
-  const methods = useForm();
+  const methods = useForm({
+    defaultValues: {
+      lastName: "doe",
+    },
+  });
   const { formState } = methods;
   const onSubmit = (data: any) => console.log(data, formState);
 
