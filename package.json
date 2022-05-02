@@ -1,7 +1,7 @@
 {
   "name": "react-hook-form-builder",
-  "version": "0.1.0",
-  "description": "i",
+  "version": "0.1.1",
+  "description": "schema form builder for react-hook-form",
   "private": false,
   "keywords": [
     "form-builder",
@@ -16,9 +16,9 @@
     "type": "git",
     "url": "git+https://github.com/sepehr09/react-hook-form-builder.git"
   },
-  "main": "./dist/cjs/formBuilder.js",
-  "module": "./dist/esm/formBuilder.js",
-  "types": "./dist/d/formBuilder.d.ts",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
+  "types": "./dist/d/index.d.ts",
   "files": [
     "/dist"
   ],
