@@ -103,7 +103,7 @@ export default function ContactUsPage() {
 
 | Type             | Type                                                 | Description                                      |
 | ---------------- | ---------------------------------------------------- | ------------------------------------------------ |
-| key              | string                                               | unque key for each form element.                 |
+| key              | string                                               | unique key for each form element.                |
 | elementType      | string                                               | Define element type                              |
 | props            | any                                                  | Props passing to element component.              |
 | rules            | [HTML standard for form validation][html-validation] |                                                  |
