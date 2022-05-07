@@ -21,4 +21,6 @@ export interface ISchemaProps<TFormValues extends Record<string, any> = Record<s
   rules?: Exclude<RegisterOptions, "valueAsNumber" | "valueAsDate" | "setValueAs">;
   defaultValue?: UnpackNestedValue<FieldPathValue<TFormValues, any>>;
   ignoreController?: boolean;
+  onDidMount?: (args: UseFormReturn) => void;
+  onDidUnMount?: (args: UseFormReturn) => void;
 }

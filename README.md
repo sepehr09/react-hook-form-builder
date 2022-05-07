@@ -2,9 +2,13 @@
 
 > Light weight schema Form builder for [react-hook-form][react-hook-form].
 
-[![NPM](https://img.shields.io/npm/v/react-hook-form-builder.svg)](https://www.npmjs.com/package/react-hook-form-builder)
+[![NPM](https://img.shields.io/npm/v/react-hook-form-builder.svg)][package-npm-link]
 
-This package takes your schema and builds the form based on that using your own components.
+This package takes your **schema** and builds the **form** based on that **using your own components**.
+
+## Demo
+
+The working react example is [here][react-example-github-link].
 
 ## Installation
 
@@ -126,3 +130,5 @@ export default BasicInput;
 
 [html-validation]: https://developer.mozilla.org/en-US/docs/Learn/HTML/Forms/Form_validation
 [react-hook-form]: https://react-hook-form.com/
+[package-npm-link]: https://www.npmjs.com/package/react-hook-form-builder
+[react-example-github-link]: https://github.com/sepehr09/react-hook-form-builder/tree/master/examples/react-app
