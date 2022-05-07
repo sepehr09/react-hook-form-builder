@@ -105,14 +105,16 @@ export default function ContactUsPage() {
 
 ## schema props
 
-| Type             | Type                                                 | Description                                      |
-| ---------------- | ---------------------------------------------------- | ------------------------------------------------ |
-| key              | string                                               | unique key for each form element.                |
-| elementType      | string                                               | Define element type                              |
-| props            | any                                                  | Props passing to element component.              |
-| rules            | [HTML standard for form validation][html-validation] |                                                  |
-| defaultValue     | any                                                  |                                                  |
-| ignoreController | boolean                                              | ignore wrapping element inside `<Controller />`. |
+| Type             | Type                                                 | Description                                                |
+| ---------------- | ---------------------------------------------------- | ---------------------------------------------------------- |
+| key              | string                                               | unique key for each form element.                          |
+| elementType      | string                                               | Define element type                                        |
+| props            | Object / (args: UseFormReturn) => Object             | Props passing to element component.                        |
+| rules            | [HTML standard for form validation][html-validation] |                                                            |
+| defaultValue     | any                                                  |                                                            |
+| ignoreController | boolean                                              | ignore wrapping element inside `<Controller />`.           |
+| onDidMount       | (args: UseFormReturn) => void                        | function that will be called after the field is mounted.   |
+| onDidUnMount     | (args: UseFormReturn) => void                        | function that will be called after the field is unmounted. |
 
 ## Example element
 
