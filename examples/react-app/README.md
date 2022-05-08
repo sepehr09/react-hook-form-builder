@@ -1,6 +1,24 @@
+# Live example
+
+[Live example](https://codesandbox.io/s/react-hook-form-builder-ps40uq?file=/src/App.tsx)
+
+> This is an example project. so the fields is just for demo and in real project you should use your own components and fields.
+
+# `react-hook-form-builder` Example
+
+Clone this repository and run it with following commands:
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Install
+
+```bash
+npm install
+#  or
+yarn
+```
 
 ## Available Scripts
 
